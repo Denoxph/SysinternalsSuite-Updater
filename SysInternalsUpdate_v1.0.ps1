@@ -75,7 +75,7 @@
                         $release = $_.release
                         $name = $_.name
 
-                        Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore
+                        Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore -UseBasicParsing
 
                         $object = New-Object PSObject -Property @{
                                 name = $name
@@ -100,7 +100,7 @@
                     $release = $_.release
                     $name = $_.name
 
-                    Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore
+                    Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore -UseBasicParsing
 
                     $object = New-Object PSObject -Property @{
                             name = $name
@@ -151,7 +151,7 @@
 
                     Try{
 
-                        Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore
+                        Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore -UseBasicParsing
                         
                         $object = New-Object PSObject -Property @{
                             name = $name
@@ -227,7 +227,7 @@
 
 #region collecting information from the webside
 
-    $list = Invoke-WebRequest -Uri $uri
+    $list = Invoke-WebRequest -Uri $uri -UseBasicParsing
 
     $wip = $list.RawContent.Remove(0,$list.RawContent.IndexOf("<pre") + 5)
 
@@ -253,7 +253,7 @@
                 $name = $_.name
 
                 Try{
-                    Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore
+                    Invoke-WebRequest -Uri $url -OutFile "$path\SysinternalsSuite\$name" -ErrorAction Ignore -UseBasicParsing
                 }
 
                 Catch{
