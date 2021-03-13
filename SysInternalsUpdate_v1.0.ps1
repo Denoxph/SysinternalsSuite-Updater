@@ -219,7 +219,7 @@
 #region variables
 
     # Edit $Path if needed
-    $path = ""
+    $path = "C:/"
     $uri = "https://live.sysinternals.com/"
     $newFolder = $false
 
