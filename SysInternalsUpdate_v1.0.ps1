@@ -1,5 +1,5 @@
 ﻿##############################Function##############################
-#             This section contains the used functions / Johannes Test             #
+#             This section contains the used functions             #
 ####################################################################
 
 #region functions
