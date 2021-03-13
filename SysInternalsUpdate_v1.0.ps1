@@ -218,7 +218,7 @@
 
 #region variables
 
-    # $path je nach bedarf anpassen
+    # $path je nach Bedarf anpassen
     $path = "C:\Program Files\Sysinternals"
     $uri = "https://live.sysinternals.com/"
     $newFolder = $false
